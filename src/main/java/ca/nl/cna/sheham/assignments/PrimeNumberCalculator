@@ -1,4 +1,4 @@
-
+package ca.nl.cna.sheham.assignments;
 
 public class PrimeNumberCalculator {
     private Double naturalNumber;
