@@ -1,0 +1,16 @@
+
+
+public class PrimeNumberCalculator {
+    private Double naturalNumber;
+
+    public  PrimeNumberCalculator(Double naturalNumber ) {
+        this.naturalNumber = naturalNumber;
+    }
+
+    public static IsPrime( Double naturalNumber) {
+        if (naturalNumber % 2 == 0 && naturalNumber > 2){
+            System.out.println("The number is prime");
+        } else {
+            System.out.println("The number is not prime");
+    }
+}

@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class FunWIthPrimes {
+    public static void main(String[] args) {
+        System.out.println("Let's have fun with primes!");
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter number: ");
+        Double naturalNumber = input.nextLine();
+        System.out.println(isPrime(naturalNumber));
+    }
+}
