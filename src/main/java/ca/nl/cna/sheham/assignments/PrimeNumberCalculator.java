@@ -29,25 +29,26 @@ public class PrimeNumberCalculator {
     }
 
     public String getUniquePrimeFactorization() {
-
+        int i = 2;
         String upf = upf = "Unique Prime Factorization of " + number + " is ";
         if (isPrime() == true) {
             upf += number + "*1";
         } else {
-            if (number % 2 == 0) {
-                if ((number / 2) % 2 != 0) {
-                    upf += "2" + "*" + number / 2;
+
+            while(number > 1){
+
+                if(number % i == 0){
+                    upf += i;
+                    number = number/i;
+                    if (number > 1){
+                        upf += "*";
+                    }
                 } else {
-
-
-            }
+                    i++;
                 }
-
-
-
             }
 
-        }
+            }
         return upf;
     }
 }
