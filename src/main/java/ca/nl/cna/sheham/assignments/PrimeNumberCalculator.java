@@ -30,7 +30,7 @@ public class PrimeNumberCalculator {
 
     public String getUniquePrimeFactorization() {
         int i = 2;
-        String upf = upf = "Unique Prime Factorization of " + number + " is ";
+        String upf = upf = " ";
         if (isPrime() == true) {
             upf += number + "*1";
         } else {
