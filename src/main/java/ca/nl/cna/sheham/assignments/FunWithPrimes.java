@@ -17,7 +17,7 @@ public class FunWithPrimes {
         if (option == 1) {
             System.out.println("Enter number: ");
             int number = input.nextInt();
-            for (int i = 3; i <= number; i++){
+            for (int i = 2; i <= number; i++){
 
                 if (new PrimeNumberCalculator(i).isPrime()){
                     System.out.println(i);
