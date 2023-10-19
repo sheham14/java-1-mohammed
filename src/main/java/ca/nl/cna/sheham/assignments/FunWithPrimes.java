@@ -34,10 +34,7 @@ public class FunWithPrimes {
                 if (new PrimeNumberCalculator(i).isPrime()){
                     System.out.println(i);
                 }
-
             }
-
-
         } else if(option == 3) {
             System.out.println("Enter number: ");
             int number = input.nextInt();
@@ -50,8 +47,5 @@ public class FunWithPrimes {
                System.out.println(new PrimeNumberCalculator(i).getUniquePrimeFactorization());
             }
         }
-
-
     }
-
 }
