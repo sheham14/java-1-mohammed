@@ -6,6 +6,12 @@ public class Invoice {
     private InvoiceItem item2;
     private InvoiceItem item3;
 
+    public Invoice(InvoiceItem item1, InvoiceItem item2, InvoiceItem item3) {
+        this.item1 = item1;
+        this.item2 = item2;
+        this.item3 = item3;
+    }
+
     public InvoiceItem getItem1() {
         return item1;
     }
@@ -30,5 +36,7 @@ public class Invoice {
         this.item3 = item3;
     }
 
-    public double getInvoiceTotal() {return item1.getItemTotal() + item2.getItemTotal() + item3.getItemTotal();}
+    public double getInvoiceTotal() {
+        return item1.getItemTotal() + item2.getItemTotal() + item3.getItemTotal();
+    }
 }

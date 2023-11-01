@@ -1,15 +1,13 @@
 package ca.nl.cna.sheham.assignments.Assignment5;
 
 public class Product {
-
     private int id;
-    private String name;
+    private String description;
     private Double price;
 
-    public Product(int id, String name, Double price) {
-
+    public Product(int id, String description, Double price) {
         this.id = id;
-        this.name = name;
+        this.description = description;
         this.price = price;
 
     }
@@ -24,12 +22,12 @@ public class Product {
         }
     }
 
-    public String getName() {
-        return name;
+    public String getDescription() {
+        return description;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Double getPrice() {
