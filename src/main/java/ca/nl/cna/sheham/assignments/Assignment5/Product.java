@@ -37,6 +37,8 @@ public class Product {
     public void setPrice(Double price) {
         if (price > 0) {
             this.price = price;
+        } else {
+            throw new IllegalArgumentException("Price must be a positive number!");
         }
     }
 

@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class InvoiceTester {
 
     public static void main(String[] args) {
-        Product bread = new Product(1, "Bread", -2.99);
+        Product bread = new Product(1, "Bread", 2.99);
         Product milk = new Product(2, "Milk", 4.99);
         Product eggs = new Product(3, "Eggs", 3.99);
         InvoiceItem invoiceBread = new InvoiceItem(bread, 2);
