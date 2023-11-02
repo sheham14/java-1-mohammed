@@ -2,7 +2,7 @@ package ca.nl.cna.sheham.examples;
 
 public class SimpleSavingsAccount {
 
-    private String name;
+    private final String name;
 
     private double balance;
 
@@ -21,7 +21,7 @@ public class SimpleSavingsAccount {
         return balance;
     }
 
-    public void deposit(double amount){
+    public void deposit(double amount) {
         this.balance = this.balance + amount;
     }
 }
