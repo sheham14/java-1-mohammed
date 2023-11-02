@@ -1,4 +1,4 @@
-package ca.nl.cna.sheham.assignments;
+package ca.nl.cna.sheham.assignments.Assignment1;
 
 public class Employee {
     private String firstName;

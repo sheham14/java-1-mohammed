@@ -1,8 +1,15 @@
 package ca.nl.cna.sheham.assignments.Assignment5;
 import java.util.Scanner;
 
+/**
+ * A class for testing the Product, InvoiceItem, and Invoice classes.
+ */
 public class InvoiceTester {
 
+    /**
+     * Initiation of each product and turning it into and InvoiceItem object by adding the quantity.
+     * The invoice is printed in the specified format. Total is rounded to 2 decimal places.
+     */
     public static void main(String[] args) {
         Product bread = new Product(1, "Bread", 2.99);
         Product milk = new Product(2, "Milk", 4.99);

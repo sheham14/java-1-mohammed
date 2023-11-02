@@ -1,4 +1,4 @@
-package ca.nl.cna.sheham.assignments;
+package ca.nl.cna.sheham.assignments.Assignment2;
 
 public class Car {
 

@@ -1,4 +1,4 @@
-package ca.nl.cna.sheham.assignments;
+package ca.nl.cna.sheham.assignments.Assignment3;
 
 public class FunWithLoops {
     public static void main(String[] args) {

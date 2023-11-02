@@ -1,4 +1,4 @@
-package ca.nl.cna.sheham.assignments;
+package ca.nl.cna.sheham.assignments.Assignment4;
 import java.util.Scanner;
 public class FunWithPrimes {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package ca.nl.cna.sheham.assignments;
+package ca.nl.cna.sheham.assignments.Assignment3;
 import java.util.Scanner;
 public class FunWithLoops2 {
     public static void main(String[] args) {

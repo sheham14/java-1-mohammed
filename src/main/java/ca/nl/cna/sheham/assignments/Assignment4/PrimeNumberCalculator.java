@@ -1,4 +1,4 @@
-package ca.nl.cna.sheham.assignments;
+package ca.nl.cna.sheham.assignments.Assignment4;
 
 public class PrimeNumberCalculator {
     private int number;
