@@ -11,6 +11,7 @@ public class Invoice {
 
     /**
      * The constructor for the invoice object containing the three invoice item instances.
+     *
      * @param item1 The first item in the invoice
      * @param item2 The second item in the invoice
      * @param item3 The third item in the invoice
@@ -23,6 +24,7 @@ public class Invoice {
 
     /**
      * Fetches the first item of the invoice and returns it.
+     *
      * @return item1
      */
     public InvoiceItem getItem1() {
@@ -31,6 +33,7 @@ public class Invoice {
 
     /**
      * Sets the first item to a new instance of InvoiceItem class.
+     *
      * @param item1 The new InvoiceItem instance
      */
     public void setItem1(InvoiceItem item1) {
@@ -39,6 +42,7 @@ public class Invoice {
 
     /**
      * Fetches the second item of the invoice and returns it.
+     *
      * @return item2
      */
     public InvoiceItem getItem2() {
@@ -47,6 +51,7 @@ public class Invoice {
 
     /**
      * Sets the second item to a new instance of InvoiceItem class.
+     *
      * @param item2 The new InvoiceItem instance
      */
     public void setItem2(InvoiceItem item2) {
@@ -55,6 +60,7 @@ public class Invoice {
 
     /**
      * Fetches the third item of the invoice and returns it.
+     *
      * @return item3
      */
     public InvoiceItem getItem3() {
@@ -63,6 +69,7 @@ public class Invoice {
 
     /**
      * Sets the third item to a new instance of InvoiceItem class.
+     *
      * @param item3 The new InvoiceItem instance
      */
     public void setItem3(InvoiceItem item3) {
@@ -71,6 +78,7 @@ public class Invoice {
 
     /**
      * Calculates the total of the invoice by adding the totals of each invoice item.
+     *
      * @return total of item1 + item2 + item3
      */
     public double getInvoiceTotal() {

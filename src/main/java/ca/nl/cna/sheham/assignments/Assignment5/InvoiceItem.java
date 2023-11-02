@@ -9,16 +9,23 @@ public class InvoiceItem {
 
     /**
      * The constructor of the invoice item object.
-     * @param product An object of Product class
+     *
+     * @param product  An object of Product class
      * @param quantity The number of the product bought
      */
     public InvoiceItem(Product product, int quantity) {
         this.product = product;
-        this.quantity = quantity;
+        if (quantity > 0) {
+            this.quantity = quantity;
+        } else {
+            throw new IllegalArgumentException("Quantity must be a positive number!");
+        }
+
     }
 
     /**
      * Fetches the product object and returns it.
+     *
      * @return product
      */
     public Product getProduct() {
@@ -27,6 +34,7 @@ public class InvoiceItem {
 
     /**
      * Sets the product object to a new instance of Product class.
+     *
      * @param product The new instance of the product
      */
     public void setProduct(Product product) {
@@ -35,6 +43,7 @@ public class InvoiceItem {
 
     /**
      * Fetches the quantity of the product bought and returns it.
+     *
      * @return quantity
      */
     public int getQuantity() {
@@ -43,6 +52,7 @@ public class InvoiceItem {
 
     /**
      * Sets the quantity of the product to a new value.
+     *
      * @param quantity Must be a positive number
      */
     public void setQuantity(int quantity) {
@@ -55,6 +65,7 @@ public class InvoiceItem {
 
     /**
      * Calculates the total cost of the product by multiplying its price and quantity.
+     *
      * @return product price * quantity
      */
     public double getItemTotal() {

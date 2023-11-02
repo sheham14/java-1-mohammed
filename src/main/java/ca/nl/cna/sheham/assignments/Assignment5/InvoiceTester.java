@@ -1,4 +1,5 @@
 package ca.nl.cna.sheham.assignments.Assignment5;
+
 import java.util.Scanner;
 
 /**

@@ -10,18 +10,24 @@ public class Product {
 
     /**
      * The constructor for an object of Product class.
-     * @param id The ID of the product. Cannot be negative.
+     *
+     * @param id          The ID of the product. Cannot be negative.
      * @param description The description of the product. Name is sufficient.
-     * @param price Price of the product. Cannot be negative.
+     * @param price       Price of the product. Cannot be negative.
      */
     public Product(int id, String description, Double price) {
         this.id = id;
         this.description = description;
-        this.price = price;
+        if (price > 0) {
+            this.price = price;
+        } else {
+            throw new IllegalArgumentException("Price must be a positive number!");
+        }
     }
 
     /**
      * Fetches the ID of the product and returns it.
+     *
      * @return id
      */
     public int getId() {
@@ -30,6 +36,7 @@ public class Product {
 
     /**
      * Sets the ID of the product to a new value.
+     *
      * @param id Cannot be negative
      */
     public void setId(int id) {
@@ -42,6 +49,7 @@ public class Product {
 
     /**
      * Fetches the description of the product and returns it.
+     *
      * @return description
      */
     public String getDescription() {
@@ -50,6 +58,7 @@ public class Product {
 
     /**
      * Sets the description of the product to a new string.
+     *
      * @param description The new description of the product
      */
     public void setDescription(String description) {
@@ -58,6 +67,7 @@ public class Product {
 
     /**
      * Fetches the price of the product and returns it.
+     *
      * @return price
      */
     public Double getPrice() {
@@ -66,6 +76,7 @@ public class Product {
 
     /**
      * Sets the price of the product to a new value. It cannot be negative.
+     *
      * @param price New price of the product
      */
     public void setPrice(Double price) {
