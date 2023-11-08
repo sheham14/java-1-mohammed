@@ -26,8 +26,19 @@ public class PlayingCard {
         //TODO Write this method
         //TODO Find the ASCII Values for the suits and print them out!
         //Hint: create a char form a unicode value and find the suits online
+
+
     }
 
     public enum Suit {DIAMONDS, HEARTS, CLUBS, SPADES};
+    char diamonds = '\u2662';
+    char hearts = '\u2661';
+    char clubs = '\u2667';
+    char spades = '\u2664';
+
+
 
 }
+
+
+
