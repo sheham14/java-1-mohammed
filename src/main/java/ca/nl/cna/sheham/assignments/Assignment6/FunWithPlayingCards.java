@@ -5,6 +5,6 @@ public class FunWithPlayingCards {
         System.out.println("Fun with Playing Cards!");
 
         PlayingCard playingcard = new PlayingCard(2, PlayingCard.Suit.DIAMONDS);
-        System.out.println();
+        System.out.println(playingcard);
     }
 }
