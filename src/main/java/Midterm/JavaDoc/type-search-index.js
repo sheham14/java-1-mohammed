@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"Midterm","l":"Course"},{"p":"Midterm","l":"FunWithCourses"},{"p":"Midterm","l":"FunWithDice"},{"p":"Midterm","l":"FunWithRandomRectangles"},{"p":"Midterm","l":"FunWithRectangles"},{"p":"Midterm","l":"Rectangle"}];updateSearchResults();
