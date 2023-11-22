@@ -3,6 +3,11 @@ package ca.nl.cna.sheham.assignments.Assignment6;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * The application for the playing cards.
+ * Decks can be created and shuffled.
+ * Cards and Hands can be drawn from a deck.
+ */
 public class FunWithPlayingCards {
     public static void main(String[] args) {
 
@@ -28,7 +33,7 @@ public class FunWithPlayingCards {
             } else if (c == 'B') {
                 CardDeck.shuffleDeck(playingCardArray);
                 System.out.println("Deck shuffled.");
-//                System.out.println(playingCardArray);
+//                System.out.println(CardDeck.shuffleDeck(playingCardArray));
             } else if(c == 'C'){
                 System.out.println(CardDeck.drawCard(playingCardArray));
 //                System.out.println(playingCardArray);
@@ -39,6 +44,6 @@ public class FunWithPlayingCards {
             }
 
         } while(c != 'Q');
-        System.out.println("\nGoodbye!");
+        System.out.println("\nGame ended!");
     }
 }
