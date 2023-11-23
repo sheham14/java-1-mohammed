@@ -15,8 +15,11 @@ public class PlayingCardFactory {
 
         int min = 2;
         int max = 14;
-        int randValue = ThreadLocalRandom.current().nextInt(min, max + 1);
-        int suitIndex = ThreadLocalRandom.current().nextInt(0,4);
+        int suitMin = 1;
+        int suitMax = 4;
+        Random random = new Random();
+        int randValue = random.nextInt(min,max);
+        int suitIndex = random.nextInt(suitMin, suitMax);
         PlayingCard.Suit randomSuit = PlayingCard.Suit.values()[suitIndex];
         return new PlayingCard(randValue,randomSuit);
         }

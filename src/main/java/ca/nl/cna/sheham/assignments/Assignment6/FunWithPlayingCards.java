@@ -1,6 +1,4 @@
 package ca.nl.cna.sheham.assignments.Assignment6;
-
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -14,10 +12,12 @@ public class FunWithPlayingCards {
         System.out.println("Lets have fun with Playing Cards!" );
         Scanner input = new Scanner(System.in);
         char c;
+        CardDeck cardDeck = new CardDeck();
+
+
         do {
-            ArrayList<PlayingCard> playingCardArray = new ArrayList<>();
-            playingCardArray = CardDeck.createDeck(new ArrayList<>());
-            System.out.printf("""
+
+            System.out.print("""
                     A. Print Deck
                     B. Shuffle Deck
                     C. Draw Card
@@ -29,17 +29,15 @@ public class FunWithPlayingCards {
             c = Character.toUpperCase(input.next().charAt(0));
 
             if (c == 'A') {
-                System.out.println(playingCardArray);
+                cardDeck.printDeck();
             } else if (c == 'B') {
-                CardDeck.shuffleDeck(playingCardArray);
+                cardDeck.shuffleDeck();
                 System.out.println("Deck shuffled.");
-//                System.out.println(CardDeck.shuffleDeck(playingCardArray));
             } else if(c == 'C'){
-                System.out.println(CardDeck.drawCard(playingCardArray));
-//                System.out.println(playingCardArray);
+                System.out.println(cardDeck.drawCard());
             } else if(c == 'D'){
                 for(int i = 0; i < 5; i++){
-                    System.out.println(CardDeck.drawCard(playingCardArray));
+                    System.out.println(cardDeck.drawCard());
                 }
             }
 
