@@ -43,26 +43,6 @@ public class PlayingCard {
         return suit;
     }
 
-//    /**
-//     * Prints the playing card in a specific format of the card number followed by the suit.
-//     * The suit characters have been assigned to their names as well.
-//     *
-//     * @param playingCard The playing card
-//     * @param printStream The print format of the card
-//     */
-//    public static void printAsciiCard(PlayingCard playingCard, PrintStream printStream) {
-//        int value = playingCard.getValue();
-//        char suitSymbol;
-//        switch (playingCard.getSuit()) {
-//            case DIAMONDS -> suitSymbol = '♢';
-//            case HEARTS -> suitSymbol = '♡';
-//            case CLUBS -> suitSymbol = '♧';
-//            case SPADES -> suitSymbol = '♤';
-//            default -> throw new IllegalArgumentException("Invalid suit");
-//        }
-//        printStream.println(value + suitSymbol + '\n');
-//    }
-
     /**
      * Overrides the print method to print the Jack, Queen, King, and Ace when the card number is above 10.
      * Also prints the assigned characters of each suit when printed.
