@@ -33,4 +33,10 @@ public class InvoiceItem {
     public double itemTax(){
         return quantity * (item.getPrice() * TAX);
     }
+
+    @Override
+    public String toString() {
+        return "Item: " + item.getDescription() + ", Quantity: " + quantity +
+                ", Total: $" + itemTotal() + ", Tax: $" + itemTax();
+    }
 }

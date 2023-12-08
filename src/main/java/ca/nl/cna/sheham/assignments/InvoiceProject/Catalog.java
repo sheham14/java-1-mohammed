@@ -83,9 +83,9 @@ public class Catalog {
     }
 
     private void buildServiceList(){
-        serviceArrayList.add(new Service(ServiceType.DEFRAGMENT_HARD_DRIVE));
-        serviceArrayList.add(new Service(ServiceType.GENERAL_REPAIR));
-        serviceArrayList.add(new Service(ServiceType.COMPUTER_ASSEMBLE));
+        serviceArrayList.add(new Service(Service.Services.DEFRAGMENT_HARD_DRIVE));
+        serviceArrayList.add(new Service(Service.Services.GENERAL_REPAIR));
+        serviceArrayList.add(new Service(Service.Services.COMPUTER_ASSEMBLE));
     }
 
     public void printProducts() {
@@ -106,7 +106,6 @@ public class Catalog {
             System.out.println(ANSI_BLUE + "Price: $" + ANSI_RED +  service.getPrice());
             System.out.println(ANSI_WHITE +  "--------------------------" + ANSI_RESET);
         }
-
     }
 }
 

@@ -3,8 +3,11 @@ package ca.nl.cna.sheham.assignments.InvoiceProject;
 public class Customer {
     private String name;
 
-    public Customer(String name) {
+    private Address address;
+
+    public Customer(String name, Address address) {
         this.name = name;
+        this.address = address;
     }
 
     public String getName() {
@@ -13,5 +16,13 @@ public class Customer {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 }
