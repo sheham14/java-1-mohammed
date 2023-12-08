@@ -60,7 +60,10 @@ public class InvoicePrinter {
                 do {
                     System.out.print("Enter Item ID: ");
                     String id = input.nextLine();
-                    Product item = catalog.getProduct(id);
+                    BillableItem item = catalog.getProduct(id);
+                    if(item == null){
+                        item = catalog.getService(id);
+                    }
 
                     System.out.print("Enter Quantity: ");
                     int quantity = input.nextInt();
@@ -87,10 +90,10 @@ public class InvoicePrinter {
         System.out.println(ANSI_YELLOW + "Retro Computers Invoice\n" + ANSI_RESET);
 
         // Retro Computers company information
-        System.out.println(ANSI_CYAN + "************** Retro Computers **************" + ANSI_RESET);
-        System.out.println(ANSI_CYAN + "123 Tech Street, Tech City, TC 12345" + ANSI_RESET);
-        System.out.println(ANSI_CYAN + "Phone: (123) 456-7890  Email: info@retrocomputers.com" + ANSI_RESET);
-        System.out.println(ANSI_CYAN + "********************************************\n" + ANSI_RESET);
+        System.out.println(ANSI_BLUE + "**************" + ANSI_YELLOW +  "Retro Computers" + ANSI_BLUE + "**************" + ANSI_RESET);
+        System.out.println(ANSI_YELLOW + "123 Tech Street, Tech City, TC 12345" + ANSI_RESET);
+        System.out.println(ANSI_BLUE + "Phone: " + ANSI_YELLOW + "(123) 456-7890 " + ANSI_BLUE + "Email:" + ANSI_YELLOW + "info@retrocomputers.com" + ANSI_RESET);
+        System.out.println(ANSI_BLUE + "********************************************\n" + ANSI_RESET);
 
         // Invoice number and date
         System.out.println(ANSI_YELLOW + "Invoice Number: " + invoice.getInvoiceNum() + ANSI_RESET);
@@ -98,16 +101,16 @@ public class InvoicePrinter {
 
         // Customer information
         Customer customer = invoice.getCustomer();
-        System.out.println(ANSI_GREEN + "\n************** Customer Information **************" + ANSI_RESET);
-        System.out.println(ANSI_GREEN + "Name: " + customer.getName() + ANSI_RESET);
+        System.out.println(ANSI_BLUE + "\n**************" + ANSI_YELLOW +  "Customer Information" + ANSI_BLUE + "**************" + ANSI_RESET);
+        System.out.println(ANSI_BLUE + "Name: " + ANSI_YELLOW + customer.getName() + ANSI_RESET);
         Address address = customer.getAddress();
-        System.out.println(ANSI_GREEN + "Address: " + address.getStreet() + ", " + address.getCity() +
+        System.out.println(ANSI_BLUE + "Address: " + ANSI_YELLOW + address.getStreet() + ", " + address.getCity() +
                 ", " + address.getProvince() + ANSI_RESET);
-        System.out.println(ANSI_GREEN + "**************************************************\n" + ANSI_RESET);
+        System.out.println(ANSI_BLUE + "**************************************************\n" + ANSI_RESET);
 
         // List of products and services
         ArrayList<InvoiceItem> itemList = invoice.getItemList();
-        System.out.println(ANSI_BLUE + "************** Items **************" + ANSI_RESET);
+        System.out.println(ANSI_BLUE + "**************" + ANSI_YELLOW + "Items" + ANSI_BLUE + "**************" + ANSI_RESET);
 
         // Find the maximum width for each column
         int maxDescriptionWidth = 0;
@@ -128,20 +131,20 @@ public class InvoicePrinter {
         }
 
         // Print column headers
-        System.out.printf("%-" + (maxDescriptionWidth + 5) + "s%-"
-                        + (maxQuantityWidth + 5) + "s%-"
-                        + (maxUnitPriceWidth + 5) + "s%-"
-                        + (maxSubtotalWidth + 5) + "s%n",
-                "Description", "Quantity", "Unit Price ($)", "Subtotal ($)");
+        System.out.printf(ANSI_BLUE + "%-" + (maxDescriptionWidth + 5) + "s%-"
+                        + (maxQuantityWidth + 10) + "s%-"
+                        + (maxUnitPriceWidth + 10) + "s%-"
+                        + (maxSubtotalWidth + 10) + "s%n",
+                "Description", "Quantity", "Unit Price ($)", "Subtotal ($)" + ANSI_RESET);
 
         // Print each item in columns
         for (InvoiceItem item : itemList) {
-            System.out.printf("%-" + (maxDescriptionWidth + 5) + "s%-"
-                            + (maxQuantityWidth + 5) + "s%-"
-                            + (maxUnitPriceWidth + 5) + "s%-"
-                            + (maxSubtotalWidth + 5) + "s%n",
+            System.out.printf( ANSI_YELLOW + "%-" + (maxDescriptionWidth + 5) + "s%-"
+                            + (maxQuantityWidth + 10) + "s%-"
+                            + (maxUnitPriceWidth + 10) + "s%-"
+                            + (maxSubtotalWidth + 10) + "s%n",
                     item.getItem().getDescription(), item.getQuantity(),
-                    item.getItem().getPrice(), item.itemTotal());
+                    item.getItem().getPrice(), item.itemTotal() + ANSI_RESET);
         }
 
         // ... (previous code)
@@ -159,8 +162,8 @@ public class InvoicePrinter {
 
         // Print calculations
         System.out.println(ANSI_CYAN + "********************************************" + ANSI_RESET);
-        System.out.printf("%-" + (maxDescriptionWidth + 5) + "s%-"
-                        + (maxQuantityWidth + 5) + "s%-"
+        System.out.printf(ANSI_BLUE + "%-" + (maxDescriptionWidth + 5) + "s%-"
+                        + ANSI_YELLOW + (maxQuantityWidth + 5) + "s%-"
                         + (maxUnitPriceWidth + 5) + "s%-"
                         + (maxSubtotalWidth + 5) + "s%n",
                 "", "", "Subtotal: $", subtotal);
@@ -176,15 +179,11 @@ public class InvoicePrinter {
                 "", "", "Total Amount Due: $", totalAmountDue);
 
         // Payment terms, including the due date
-        System.out.println(ANSI_CYAN + "********************************************" + ANSI_RESET);
-        System.out.println(ANSI_CYAN + "Payment Terms: Due on " + invoice.getDueDate() + ANSI_RESET);
-
-        System.out.println("\nInvoice Details:");
-        for (InvoiceItem item : itemList) {
-            System.out.println(item);
-        }
+        System.out.println(ANSI_BLUE + "********************************************" + ANSI_RESET);
+        System.out.println(ANSI_RED + "Payment Terms: Due on " + invoice.getDueDate() + ANSI_RESET);
     }
 }
+
 
 
 

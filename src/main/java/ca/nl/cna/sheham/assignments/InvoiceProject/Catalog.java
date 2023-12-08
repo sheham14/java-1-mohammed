@@ -51,6 +51,15 @@ public class Catalog {
         return null;
     }
 
+    public Service getService(String id){
+        for (Service service : serviceArrayList){
+            if (Objects.equals(service.getId(), id)) {
+                return service;
+            }
+        }
+        return null;
+    }
+
     /**
      * Get the Product list
      * @return
