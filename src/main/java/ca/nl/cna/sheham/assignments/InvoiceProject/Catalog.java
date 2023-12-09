@@ -3,6 +3,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * A class for the store catalog. Plays the role of a database.
+ */
 public class Catalog {
 
     public static final String ANSI_RESET = "\u001B[0m";
@@ -38,9 +41,9 @@ public class Catalog {
     }
 
     /**
-     * Find a product
+     * Gets a product using its ID
      * @param id
-     * @return
+     * @return product
      */
     public Product getProduct(String id){
         for (Product product: productArrayList) {
@@ -51,6 +54,11 @@ public class Catalog {
         return null;
     }
 
+    /**
+     * Gets the Service using its ID
+     * @param id
+     * @return Service
+     */
     public Service getService(String id){
         for (Service service : serviceArrayList){
             if (Objects.equals(service.getId(), id)) {
@@ -61,19 +69,23 @@ public class Catalog {
     }
 
     /**
-     * Get the Product list
-     * @return
+     * Gets the Product list
+     * @return product list
      */
     public List<Product> getProductList(){
         return productArrayList;
     }
 
+    /**
+     * Gets the Service list
+     * @return service list
+     */
     public List<Service> getServiceList(){
         return serviceArrayList;
     }
 
     /**
-     * Build up the product list. This will keep us from needing a database at this early stage in our java journey!
+     * This builds the product list
      */
     private void buildProductList(){
         productArrayList.add(new Product("CP001", "Intel Pentium III Processor", 120));
@@ -91,12 +103,18 @@ public class Catalog {
         productArrayList.add(new Product("FN013", "Large metal case", 70.0));
     }
 
+    /**
+     * This builds the service list
+     */
     private void buildServiceList(){
         serviceArrayList.add(new Service(Service.Services.DEFRAGMENT_HARD_DRIVE));
         serviceArrayList.add(new Service(Service.Services.GENERAL_REPAIR));
         serviceArrayList.add(new Service(Service.Services.COMPUTER_ASSEMBLE));
     }
 
+    /**
+     * This prints the product list
+     */
     public void printProducts() {
         System.out.println(ANSI_YELLOW + "Retro Computers Products Catalog\n" + ANSI_RESET);
         for (Product product : productArrayList) {
@@ -107,6 +125,9 @@ public class Catalog {
         }
     }
 
+    /**
+     * This prints the services list
+     */
     public void printServices() {
         System.out.println("\u001B[33m" + "Retro Computers Services Catalog\n" + "\u001B[34m");
         for (Service service : serviceArrayList) {
