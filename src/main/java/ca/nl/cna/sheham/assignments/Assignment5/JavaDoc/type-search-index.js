@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"ca.nl.cna.sheham.assignments.Assignment5","l":"Invoice"},{"p":"ca.nl.cna.sheham.assignments.Assignment5","l":"InvoiceItem"},{"p":"ca.nl.cna.sheham.assignments.Assignment5","l":"InvoiceTester"},{"p":"ca.nl.cna.sheham.assignments.Assignment5","l":"Product"}];updateSearchResults();
