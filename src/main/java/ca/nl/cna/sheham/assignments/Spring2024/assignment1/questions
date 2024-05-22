@@ -1,0 +1,70 @@
+#1 Question: What exception types can be caught by the following handler? (2
+marks)
+catch (Exception e) {
+}
+
+Answer: This exception catches any generic exceptions from the Exception class. Exceptions like ArithmeticException and
+NullPointerException are some examples of what types can be caught with that code.
+
+What is wrong with using this type of exception handler? ( 2 marks)
+
+Answer: Using such an exception handler will not help the developer in understanding the exact cause of the error.
+It is much better to use specific exception handling with meaningful messages so the cause of the error is much easier to
+understand.
+
+#2 Question: Is there anything wrong with this exception handler as written? Will this
+code compile? ( 2 marks)
+try {
+} catch (Exception e) {
+} catch (ArithmeticException a) {
+}
+
+Answer: This code will not compile because of the order of the catch blocks. Since the Exception e is placed first, the
+second catch block will not run because it is already caught in the first block. ArithmeticException is a subclass of
+Exception. The code will compile if the order of the catch blocks are swapped.
+
+#3 Exercise: Modify the following cat method so that it will compile: ( 3 marks )
+public static void cat(File file) {
+RandomAccessFile input = null;
+String line = null;
+try {
+input = new RandomAccessFile(file, "r");
+while ((line = input.readLine()) != null) {
+System.out.println(line);
+}
+} finally {
+if (input != null) {
+input.close();
+}
+}
+}
+
+Answer:       public static void cat(File file) {
+                  RandomAccessFile input = null;
+                  String line = null;
+                  try {
+                      input = new RandomAccessFile(file, "r");
+                      while ((line = input.readLine()) != null) {
+                          System.out.println(line);
+                      }
+                  } catch (IOException io) {
+
+                      }
+                  }
+              }
+
+#4 Question: Completed in java files.
+
+#5 Exercise: Complete book exercise 11.16 pg 487 ( 6 marks )
+
+#6 Exercise: Complete book exercise 11.19 pg 487 ( 5 marks )
+
+#7 Exercise: Complete book exercise 11.20 pg 487 ( 5 marks )
+
+#9 Question: How do you enable assertions in Java? What happens when you release
+your code and there are assertions in the code? Is there any performance penalty for
+using assertions? ( 2 marks)
+
+Answer: Enter java -ea YourClassName in the terminal. There is a performance penalty for enabling assertions,
+thats why they are disabled by default.
+

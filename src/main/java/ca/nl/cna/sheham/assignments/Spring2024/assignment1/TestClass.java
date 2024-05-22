@@ -1,6 +1,5 @@
-package ca.nl.cna.sheham.assignments.Spring2024.review;
+package ca.nl.cna.sheham.assignments.Spring2024.assignment1;
 
-import ca.nl.cna.sheham.assignments.Spring2024.assignment1.InvalidShapeParameterException;
 import org.junit.Assert;
 import org.junit.Test;
 

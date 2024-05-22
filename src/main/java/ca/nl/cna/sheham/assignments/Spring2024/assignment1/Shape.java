@@ -1,6 +1,4 @@
-package ca.nl.cna.sheham.assignments.Spring2024.review;
-
-import ca.nl.cna.sheham.assignments.Spring2024.assignment1.InvalidShapeParameterException;
+package ca.nl.cna.sheham.assignments.Spring2024.assignment1;
 
 public abstract class Shape {
 

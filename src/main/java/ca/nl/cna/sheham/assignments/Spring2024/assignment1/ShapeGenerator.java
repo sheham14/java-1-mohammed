@@ -1,4 +1,4 @@
-package ca.nl.cna.sheham.assignments.Spring2024.review;
+package ca.nl.cna.sheham.assignments.Spring2024.assignment1;
 
 import java.util.Random;
 
